@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container h3 {
+  font-size: 20px;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: -10px 0 10px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {\n  background: white;\n  border: 1px solid #e0e0e0;\n  border-radius: 8px;\n  overflow: hidden;\n  transition: all 0.3s ease;\n}\n\n.card:hover {\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);\n  transform: translateY(-2px);\n}\n\n.preview {\n  width: 100%;\n  height: 200px;\n  background: #f5f5f5;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n\n.preview img {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\n.placeholder {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  gap: 10px;\n  color: #ccc;\n}\n\n.placeholder span {\n  font-size: 32px;\n}\n\n.content {\n  padding: 15px;\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n}\n\n.text {\n  font-size: 13px;\n  color: var(--text-light);\n  line-height: 1.4;\n}\n\n.keywords {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 8px;\n}\n\n.keyword {\n  padding: 6px 12px;\n  background: var(--primary-color);\n  color: white;\n  border: none;\n  border-radius: 20px;\n  font-size: 12px;\n  font-weight: 500;\n  cursor: pointer;\n  transition: all 0.2s ease;\n}\n\n.keyword:hover:not(:disabled) {\n  background-color: #ff7a1a;\n  transform: scale(1.05);\n}\n\n.keyword:disabled {\n  opacity: 0.6;\n  cursor: not-allowed;\n}\n\n.progress {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n  background: #f9f9f9;\n  padding: 8px 12px;\n  border-radius: 6px;\n}\n\n.progressBar {\n  flex: 1;\n  height: 4px;\n  background: #e0e0e0;\n  border-radius: 2px;\n  overflow: hidden;\n}\n\n.progressBar::after {\n  content: '';\n  display: block;\n  height: 100%;\n  background: var(--primary-color);\n  animation: loading 1s ease-in-out infinite;\n}\n\n@keyframes loading {\n  0%, 100% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.7;\n  }\n}\n\n.progress span {\n  font-size: 12px;\n  color: var(--primary-color);\n  font-weight: 600;\n  min-width: 30px;\n  text-align: right;\n}\n\n.deleteBtn {\n  background: #ff4444;\n  color: white;\n  border: none;\n  padding: 8px 16px;\n  border-radius: 4px;\n  cursor: pointer;\n  font-size: 13px;\n  font-weight: 500;\n  transition: all 0.2s ease;\n}\n\n.deleteBtn:hover {\n  background: #dd0000;\n}\n\n@media (max-width: 768px) {\n  .grid {\n    grid-template-columns: 1fr;\n  }\n}\n
