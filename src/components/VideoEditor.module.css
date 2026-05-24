@@ -1,0 +1,50 @@
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.previewSection {
+  display: flex;
+  justify-content: center;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+  max-height: 600px;
+}
+
+.canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 0 20px 20px 20px;
+}
+
+.playBtn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.playBtn:hover {\n  background-color: #ff7a1a;\n  transform: translateY(-1px);\n}\n\n.playBtn:active {\n  transform: translateY(0);\n}\n\n.timeline {\n  flex: 1;\n  display: flex;\n  align-items: center;\n}\n\n.slider {\n  width: 100%;\n  height: 6px;\n  border-radius: 3px;\n  background: #ddd;\n  outline: none;\n  -webkit-appearance: none;\n  appearance: none;\n  cursor: pointer;\n}\n\n.slider::-webkit-slider-thumb {\n  -webkit-appearance: none;\n  appearance: none;\n  width: 16px;\n  height: 16px;\n  border-radius: 50%;\n  background: var(--primary-color);\n  cursor: pointer;\n  box-shadow: 0 2px 4px rgba(255, 140, 66, 0.3);\n}\n\n.slider::-moz-range-thumb {\n  width: 16px;\n  height: 16px;\n  border-radius: 50%;\n  background: var(--primary-color);\n  cursor: pointer;\n  border: none;\n  box-shadow: 0 2px 4px rgba(255, 140, 66, 0.3);\n}\n\n.slider::-moz-range-track {\n  background: transparent;\n  border: none;\n}\n\n.timeDisplay {\n  font-size: 14px;\n  color: var(--text-light);\n  min-width: 120px;\n  text-align: right;\n  font-weight: 600;\n}\n\n@media (max-width: 768px) {\n  .editorContainer {\n    border-radius: 0;\n  }\n\n  .controls {\n    flex-wrap: wrap;\n    margin: 0 15px 15px 15px;\n  }\n\n  .playBtn {\n    flex: 1;\n    min-width: 100px;\n  }\n\n  .timeDisplay {\n    width: 100%;\n    text-align: left;\n    margin-top: 10px;\n    order: 3;\n  }\n}\n
